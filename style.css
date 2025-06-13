@@ -1,1 +1,46 @@
-/* Add your CSS here */
+/* Basic CSS Reset: removes default margin and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make the Intel logo smaller and center it */
+/* Selects any element with the class "logo" */
+.logo {
+  width: 90px;      /* Sets the logo width to 120 pixels */
+  display: block;    /* Makes the image a block element */
+  margin: 0 auto;    /* Centers the image horizontally */
+}
+
+/* Make the header look like a hero section */
+header {
+  background-color: #003366; /* Dark blue background */
+  color: white;              /* White text for contrast */
+  padding: 40px 0;           /* Space above and below content */
+  text-align: center;       /* Centers text inside the header */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;     /* Ensures padding is included in width */
+  
+}
+
+/* Make only the <p> text inside the header smaller */
+header p {
+  font-size: 25px; /* Sets the paragraph text in the header to 25 pixels */
+  line-height: 1.1; /* Adds more space between lines of text in the header */
+  border: 2px solid rgb(37, 208, 246); /* Adds a thin white border */
+  padding: 8px;            /* Adds space between the text and the border */
+  border-radius: 4px;      /* Rounds the corners a little (optional) */
+}
+
+header h1 {
+  font-size: 50px; /* Sets the main heading text in the header to 50 pixels */
+  margin: 20px 0
+}
+
+img[src="2020.png"] {
+  width: 250px !important;   /* Forces the width to 250 pixels */
+  height: auto !important;   /* Keeps the image's aspect ratio */
+  display: block;
+  margin: 0 auto;
+}
