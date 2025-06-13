@@ -44,3 +44,18 @@ img[src="2020.png"] {
   display: block;
   margin: 0 auto;
 }
+
+/* Album card styling */
+.card {
+  position: relative;
+  width: 220px; 
+  background: #fff;
+  border: 1px solid #ddd;
+  flex: 0 0 220px; /* Fixed width for each album */
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
