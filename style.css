@@ -21,16 +21,20 @@ header {
   text-align: center;       /* Centers text inside the header */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   box-sizing: border-box;     /* Ensures padding is included in width */
-  
+  margin-bottom: 35px; /* Adds space below the header */
 }
 
 /* Make only the <p> text inside the header smaller */
 header p {
+  color: white; /* Makes the paragraph text in the header white */
   font-size: 25px; /* Sets the paragraph text in the header to 25 pixels */
   line-height: 1.1; /* Adds more space between lines of text in the header */
   border: 2px solid rgb(37, 208, 246); /* Adds a thin white border */
   padding: 8px;            /* Adds space between the text and the border */
   border-radius: 4px;      /* Rounds the corners a little (optional) */
+  max-width: 900px;
+  justify-content: center; /* Centers the text */
+  margin: 0 auto; /* Centers the paragraph */
 }
 
 header h1 {
@@ -59,16 +63,18 @@ img[src="2020.png"] {
   background: linear-gradient(135deg, #1976d2, #64b5f6);
   color: white;              /* White text for good contrast */
   border: 1px solid #ddd;
-  flex: 0 0 220px; /* Fixed width for each album */
-  padding: 16px; /* Adds equal space on all sides inside the card */
+  flex: 0 0 320px;              /* Each card stays 320px wide */
+  padding: 8px; /* Smaller space inside the card */
 }
 
 /* Arrange all cards in a row (horizontally) */
 .cards-container {
-  display: flex;           /* Places child cards in a row */
-  gap: 20px;               /* Adds space between each card */
-  justify-content: center; /* Centers the row of cards */
-  align-items: flex-start;  /* Aligns cards to the top */
+  display: flex;                /* Arrange cards in a row */
+  gap: 16px;                    /* Space between cards */
+  overflow-x: auto;             /* Enable horizontal scrolling */
+  max-width: calc(4 * 320px + 3 * 16px); /* Show 4 cards + gaps */
+  margin: 0 auto;               /* Center the container */
+  padding-bottom: 16px;         /* Space for scrollbar if needed */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
 }
@@ -79,7 +85,7 @@ img[src="2020.png"] {
   height: 120px;          /* All images have the same height */
   object-fit: cover;      /* Crops images to fit the box */
   display: block;
-  margin: 0;             /* Removes default margin so spacing is controlled by padding */
+  margin: 0;    /* No extra margin around the image */
 }
 
 /* Center the h2 and h3 headings inside cards */
@@ -89,7 +95,7 @@ img[src="2020.png"] {
 }
 
 .card h2 {
-  font-size: 35px; /* Sets the font size for h2 headings */
+  font-size: 40px; /* Sets the font size for h2 headings */
   margin-top: 10px; /* Adds space above the h2 heading */
   margin-bottom: 5px;
   color: #333; /* Sets a dark color for the h2 heading */
@@ -104,7 +110,9 @@ img[src="2020.png"] {
   text-overflow: ellipsis;    /* Show "..." if text is too long */
   white-space: normal;        /* Allow wrapping to a second line */
   margin-bottom: 12px;        /* Space below the heading */
+  font-size: 23px;           /* Sets the font size for h3 headings */
 }
+
 
 .overlay {
   position: absolute; /* Positioning the overlay */
@@ -123,9 +131,20 @@ img[src="2020.png"] {
   padding: 1rem; /* Optional: padding for the overlay */
   box-sizing: border-box;  /* Include padding in width/height */
   pointer-events: none;
+  font-size: larger;
 }
 
 .cards-container:hover .overlay {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* Center the last <p> on the page */
+.scroll p {
+  text-align: center; /* Centers the text horizontally */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 21px;
+  margin-top: 15px;
+  color: #003366; /* Dark blue color for the text */
+}
+
