@@ -68,3 +68,11 @@ img[src="2020.png"] {
   display: block;
   margin: 0 auto;
 }
+
+/* Arrange all cards in a row (horizontally) */
+.cards-container {
+  display: flex;           /* Places child cards in a row */
+  gap: 16px;               /* Adds space between each card */
+  justify-content: center; /* Centers the row of cards */
+  align-items: flex-start;  /* Aligns cards to the top */
+}
